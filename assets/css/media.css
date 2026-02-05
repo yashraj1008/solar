@@ -1431,7 +1431,7 @@
     }
 
     .data-main-contact {
-        display: flex;
+        display: none;
         align-items: start;
         justify-content: center;
         flex-direction: column;
