@@ -1312,6 +1312,24 @@ body {
             rgba(0, 0, 0, 0) 100%);
 }
 
+/* Tablet (768px – 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .overlay-data {
+        background: linear-gradient(0deg,
+                rgba(0, 0, 0, 1) 30%,
+                rgba(0, 0, 0, 0) 100%);
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .overlay-data {
+        background: linear-gradient(0deg,
+                rgba(0, 0, 0, 1) 50%,
+                rgba(0, 0, 0, 0) 100%);
+    }
+}
+
 .data-design-margin {
     margin-top: 300px;
     text-align: center;
