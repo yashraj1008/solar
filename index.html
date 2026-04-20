@@ -120,7 +120,7 @@
                 preloader.classList.add('fade-out');
                 setTimeout(() => { preloader.style.display = 'none'; }, 800);
             }
-            const DELAY = 0; // set to 0 for production
+            const DELAY = 2000; // set to 0 for production
 
             document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, DELAY));
             window.addEventListener('load', () => setTimeout(hidePreloader, DELAY));
