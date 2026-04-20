@@ -1,9 +1,3 @@
-//------------------------- Preloader
-$(function () {
-  setTimeout(() => {
-    $(".preloader").fadeOut("slow");
-  }, 1000);
-});
 // ------------------------- scroll header
 $(document).ready(function () {
   $(".navbar-anchor").on("click", function (e) {

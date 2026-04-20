@@ -103,16 +103,12 @@
         <video class="video-loader" autoplay muted loop playsinline preload="auto" poster="">
             <source src="assets/loaders/loader.mp4" type="video/mp4" />
         </video>
-
     </div>
 
     <script>
         (function () {
             const preloader = document.getElementById('preloader');
-            const video = preloader.querySelector('.video-loader');
-            const fallback = preloader.querySelector('.loader-fallback');
             let hidden = false;
-
 
             function hidePreloader() {
                 if (hidden) return;
@@ -120,10 +116,10 @@
                 preloader.classList.add('fade-out');
                 setTimeout(() => { preloader.style.display = 'none'; }, 800);
             }
-            const DELAY = 0; // set to 0 for production
-
-            document.addEventListener('DOMContentLoaded', () => setTimeout(hidePreloader, DELAY));
-            window.addEventListener('load', () => setTimeout(hidePreloader, DELAY));
+            const DELAY = 3000; // set to 0 for production
+            // Hide on DOMContentLoaded or window load - whichever fires first
+            document.addEventListener('DOMContentLoaded', hidePreloader);
+            window.addEventListener('load', hidePreloader);
         })();
     </script>
     <!-- ========================= [ Loader Section Exit ] ========================= -->
